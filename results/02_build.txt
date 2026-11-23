@@ -1,0 +1,14 @@
+$ cmake --build build
+[1/11] Building CXX object CMakeFiles\chesscore.dir\src\eval.cpp.obj
+[2/11] Building CXX object CMakeFiles\chesscore.dir\src\search.cpp.obj
+[3/11] Building CXX object CMakeFiles\chesscore.dir\src\perft.cpp.obj
+[4/11] Building CXX object CMakeFiles\chesscore.dir\src\movegen.cpp.obj
+[5/11] Building CXX object CMakeFiles\chesscore.dir\src\bitboard.cpp.obj
+[6/11] Building CXX object CMakeFiles\chess_tests.dir\tests\test_main.cpp.obj
+[7/11] Building CXX object CMakeFiles\chesscore.dir\src\position.cpp.obj
+[8/11] Linking CXX static library chesscore.lib
+[9/11] Building CXX object CMakeFiles\chess.dir\src\main.cpp.obj
+[10/11] Linking CXX executable chess.exe
+[11/11] Linking CXX executable chess_tests.exe
+
+[exit code 0]

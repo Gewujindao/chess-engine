@@ -1,0 +1,12 @@
+$ cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+-- The CXX compiler identification is MSVC 19.43.34809.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (10.8s)
+-- Generating done (0.7s)
+-- Build files have been written to: build
+
+[exit code 0]

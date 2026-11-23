@@ -1,0 +1,113 @@
+$ build\chess_tests.exe
+== FEN round trip
+startpos             PASS
+kiwipete             PASS
+position3            PASS
+position4            PASS
+position4_mirrored   PASS
+position5            PASS
+position6            PASS
+
+== Perft vs published node counts
+position             depth     expected       engine  seconds  result
+startpos                 1           20           20     0.00  PASS
+startpos                 2          400          400     0.00  PASS
+startpos                 3         8902         8902     0.00  PASS
+startpos                 4       197281       197281     0.01  PASS
+startpos                 5      4865609      4865609     0.32  PASS
+startpos                 6    119060324    119060324     6.42  PASS
+kiwipete                 1           48           48     0.00  PASS
+kiwipete                 2         2039         2039     0.00  PASS
+kiwipete                 3        97862        97862     0.00  PASS
+kiwipete                 4      4085603      4085603     0.28  PASS
+kiwipete                 5    193690690    193690690     7.17  PASS
+position3                1           14           14     0.00  PASS
+position3                2          191          191     0.00  PASS
+position3                3         2812         2812     0.00  PASS
+position3                4        43238        43238     0.00  PASS
+position3                5       674624       674624     0.03  PASS
+position3                6     11030083     11030083     0.96  PASS
+position3                7    178633661    178633661    10.52  PASS
+position4                1            6            6     0.00  PASS
+position4                2          264          264     0.00  PASS
+position4                3         9467         9467     0.00  PASS
+position4                4       422333       422333     0.01  PASS
+position4                5     15833292     15833292     0.58  PASS
+position4                6    706045033    706045033    25.20  PASS
+position4_mirrored       1            6            6     0.00  PASS
+position4_mirrored       2          264          264     0.00  PASS
+position4_mirrored       3         9467         9467     0.00  PASS
+position4_mirrored       4       422333       422333     0.01  PASS
+position4_mirrored       5     15833292     15833292     0.43  PASS
+position4_mirrored       6    706045033    706045033    18.78  PASS
+position5                1           44           44     0.00  PASS
+position5                2         1486         1486     0.00  PASS
+position5                3        62379        62379     0.00  PASS
+position5                4      2103487      2103487     0.06  PASS
+position5                5     89941194     89941194     2.22  PASS
+position6                1           46           46     0.00  PASS
+position6                2         2079         2079     0.00  PASS
+position6                3        89890        89890     0.00  PASS
+position6                4      3894594      3894594     0.09  PASS
+position6                5    164075551    164075551     3.78  PASS
+
+== Alpha-beta vs unpruned minimax (same evaluate(), fixed depth)
+position               depth   minimax alphabeta     mm_nodes     ab_nodes  result
+startpos                   1        50        50           21           21  PASS
+startpos                   2         0         0          421           84  PASS
+startpos                   3        50        50         9323          744  PASS
+startpos                   4         0         0       206604         2697  PASS
+startpos                   5        70        70      5072213        31547  PASS
+kiwipete                   1       435       435           49           49  PASS
+kiwipete                   2        70        70         2088          132  PASS
+kiwipete                   3       400       400        99950         2524  PASS
+kiwipete                   4        50        50      4185553         7084  PASS
+position3                  1        90        90           15           15  PASS
+position3                  2        90        90          206           30  PASS
+position3                  3       130       130         3018          314  PASS
+position3                  4        10        10        46256          748  PASS
+position3                  5       110       110       720880         5252  PASS
+position4                  1       145       145            7            7  PASS
+position4                  2     -1085     -1085          271          144  PASS
+position4                  3      -205      -205         9738          488  PASS
+position4                  4      -615      -615       432071         3795  PASS
+position4_mirrored         1       145       145            7            7  PASS
+position4_mirrored         2     -1085     -1085          271          144  PASS
+position4_mirrored         3      -205      -205         9738          488  PASS
+position4_mirrored         4      -615      -615       432071         3871  PASS
+position5                  1      1125      1125           45           45  PASS
+position5                  2       240       240         1531          119  PASS
+position5                  3       560       560        63910         2050  PASS
+position5                  4       275       275      2167397         3699  PASS
+position6                  1       330       330           47           47  PASS
+position6                  2       -10       -10         2126          136  PASS
+position6                  3       240       240        92016         2273  PASS
+position6                  4      -110      -110      3986610         8667  PASS
+back_rank_mate_in_1        1     99999     99999           21           21  PASS
+back_rank_mate_in_1        2     99999     99999          173          123  PASS
+back_rank_mate_in_1        3     99999     99999         3202         1464  PASS
+back_rank_mate_in_1        4     99999     99999        26207         4996  PASS
+back_rank_mate_in_1        5     99999     99999       486111        36038  PASS
+queen_vs_king              1     99999     99999           29           29  PASS
+queen_vs_king              2     99999     99999           53           53  PASS
+queen_vs_king              3     99999     99999          711          711  PASS
+queen_vs_king              4     99999     99999         2031         1277  PASS
+queen_vs_king              5     99999     99999        38166        17871  PASS
+en_passant_available       1       110       110           32           32  PASS
+en_passant_available       2        15        15          739          184  PASS
+en_passant_available       3       125       125        22376         1520  PASS
+en_passant_available       4        15        15       546514         9349  PASS
+promotion_race             1       150       150            4            4  PASS
+promotion_race             2       140       140           23           11  PASS
+promotion_race             3       870       870          179           69  PASS
+promotion_race             4       880       880         1307           79  PASS
+promotion_race             5       910       910        13434          976  PASS
+black_to_move              1        30        30           32           32  PASS
+black_to_move              2      -100      -100         1048          127  PASS
+black_to_move              3       145       145        32072         2186  PASS
+black_to_move              4      -110      -110      1040115        11249  PASS
+total nodes: minimax 19759032, alphabeta 165622
+
+== Summary: 100 passed, 0 failed (103.9 s)
+
+[exit code 0]

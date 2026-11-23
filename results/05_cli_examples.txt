@@ -1,0 +1,33 @@
+$ build/chess.exe perft 5
+nodes 4865609
+time 0.289513 s
+
+$ build/chess.exe divide 2 8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1
+a5a4: 15
+a5a6: 15
+b4b1: 16
+b4b2: 16
+b4b3: 15
+b4a4: 15
+b4c4: 15
+b4d4: 15
+b4e4: 15
+b4f4: 2
+e2e3: 15
+e2e4: 16
+g2g3: 4
+g2g4: 17
+total 191
+
+$ build/chess.exe search 5
+score 70
+bestmove e2e4
+nodes 31547
+time 0.0633024 s
+
+$ build/chess.exe search 4 6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1
+score 99999
+bestmove d1d8
+nodes 4996
+time 0.0048142 s
+

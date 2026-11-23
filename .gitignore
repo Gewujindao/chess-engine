@@ -1,0 +1,20 @@
+# Build output
+build/
+out/
+*.obj
+*.o
+*.exe
+*.lib
+*.a
+*.pdb
+*.ilk
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Editors
+.vs/
+.vscode/
+.idea/
